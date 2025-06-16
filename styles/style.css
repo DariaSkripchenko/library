@@ -59,7 +59,7 @@ h1 {
 }
 
 .navigation-link:hover {
-    color: lightgray;
+    color: grey;
 }
 
 .dropdown {
@@ -94,7 +94,7 @@ h2 {
 }
 
 /* Books */
-.text-list {
+.text-list, .image-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -121,10 +121,36 @@ h2 {
     font-weight: bold;
 }
 
-.text-link:hover {
-    color: lightgray;
+.text-link[href]:hover {
+    color: grey;
 }
 
 .text-description {
     margin: 0;
+}
+
+.image-list {
+    display: grid;
+    gap: 20px;
+}
+
+.image-item {
+    margin: 0;
+    padding: 0;
+}
+
+.image-button {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+}
+
+.image-button:hover {
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.image-button img {
+    height: 200px;
 }
