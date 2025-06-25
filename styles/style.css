@@ -11,6 +11,7 @@ body {
 
 header {
     padding: 20px;
+    padding-right: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -130,13 +131,16 @@ h2 {
 }
 
 .image-list {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-evenly;
 }
 
 .image-item {
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 .image-button {
@@ -152,5 +156,6 @@ h2 {
 }
 
 .image-button img {
+    display: block;
     height: 200px;
 }
