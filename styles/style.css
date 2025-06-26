@@ -76,6 +76,7 @@ h1 {
 main {
     padding: 20px;
     padding-top: 0;
+    position: relative;
 }
 
 h2 {
@@ -158,4 +159,80 @@ h2 {
 .image-button img {
     display: block;
     height: 200px;
+}
+
+.popup_fade::before {
+    content: '';
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0.7;
+}
+
+.popup {
+    display: none;
+}
+
+.popup_on {
+    position: fixed;
+    width: 60%;
+    height: 80vh;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 610;
+
+}
+
+.popup-img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.popup-close {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.popup-close::before, .popup-close::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background-color: #fff;
+    top: 5px;
+    left: 16px;
+}
+
+.popup-close::before {
+    transform: rotate(45deg);
+}
+
+.popup-close::after {
+    transform: rotate(-45deg);
+}
+
+.popup-close:hover {
+    cursor: pointer;
+    border-color: gray;
+}
+
+.popup-close:hover::before, .popup-close:hover::after {
+    background-color: gray;
 }
