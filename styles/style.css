@@ -82,8 +82,8 @@ main {
 h2 {
     text-align: center;
     font-size: 45px;
-    margin-top: 0;
-    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .author-photo {
@@ -97,20 +97,20 @@ h2 {
 }
 
 /* Books */
-.text-list, .image-list {
+.text-list, .type-list, .image-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.text-item {
+.text-item, .type-item {
     position: relative;
     padding-left: 250px;
     margin-bottom: 30px;
     
 }
 
-.text-year {
+.text-year, .type-description {
     position: absolute;
     padding: 0;
     margin: 0;
@@ -132,11 +132,14 @@ h2 {
     margin: 0;
 }
 
+.image-type {
+    position: relative;
+}
+
 .image-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-evenly;
 }
 
 .image-item {
@@ -235,4 +238,70 @@ h2 {
 
 .popup-close:hover::before, .popup-close:hover::after {
     background-color: gray;
+}
+
+.memories-item {
+    padding-left: 0;
+}
+
+.memories-button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Tinos", sans-serif;
+    font-size: 15px;
+    padding: 10px 35px 10px 0;
+}
+
+.memories-title {
+    margin: 0;
+    font-size: 25px;
+}
+
+.memories-title::before, .memories-title::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #000;
+    top: 17px;
+}
+
+.memories-title::before {
+    transform: rotate(45deg);
+    right: 5px;
+}
+
+.memories-title::after {
+    transform: rotate(-45deg);
+    right: 14px;
+}
+
+.memories-button:hover .memories-title {
+    color: gray;
+    text-decoration: underline;
+}
+
+.memories-button:hover .memories-title::before, .memories-button:hover .memories-title::after {
+    background-color: gray;
+}
+
+.memories-author {
+    font-style: italic;
+    margin-top: 0;
+}
+
+.memories-description {
+    display: none;
+}
+
+.memories-description_on {
+    display: block;
+}
+
+.memories-description p {
+    margin: 0;
+    margin-bottom: 5px;
 }
