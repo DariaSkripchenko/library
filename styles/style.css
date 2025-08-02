@@ -2,11 +2,18 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Tinos", sans-serif;
     font-size: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -47,7 +54,7 @@ h1 {
 
 .navigation-link {
     color: black;
-    background-color: white;
+    background-color: transparent;
     text-decoration: none;
     border: none;
     padding: 0;
@@ -279,6 +286,14 @@ h2 {
     right: 14px;
 }
 
+.memories-title_open::before {
+    transform: rotate(-45deg);
+}
+
+.memories-title_open::after {
+    transform: rotate(45deg);
+}
+
 .memories-button:hover .memories-title {
     color: gray;
     text-decoration: underline;
@@ -304,4 +319,30 @@ h2 {
 .memories-description p {
     margin: 0;
     margin-bottom: 5px;
+}
+
+footer {
+    background-color: lightgray;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer-navigation-list {
+    list-style: none;
+}
+
+.footer-navigation-link {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    text-decoration: none;
+    font-family: "Tinos", sans-serif;
+    font-size: 14px;
+    padding: 0;
+    line-height: normal;
+    appearance: none;
+}
+
+a.footer-navigation-link:hover {
+    text-decoration: underline;
 }
