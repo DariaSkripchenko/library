@@ -252,6 +252,7 @@ h2 {
 .image-button img {
     display: block;
     height: 200px;
+    max-width: 600px;
 }
 
 .popup_fade::before {
